@@ -1,8 +1,7 @@
 import Head from 'next/head';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
-import Link from 'next/link';
-import { Clock, MessageCircle, Rocket, CheckCircle, ArrowRight } from 'lucide-react';
+import { Clock, MessageCircle, Rocket, CheckCircle } from 'lucide-react';
 
 export default function CommentCaMarchePage() {
   const canonicalUrl = "https://visioflow.fr/comment-ca-marche";
@@ -27,7 +26,7 @@ export default function CommentCaMarchePage() {
       icon: Rocket,
       title: 'Réalisation rapide',
       description: 'Votre site entre en production. Design, développement, optimisation SEO — tout est pris en charge.',
-      duration: '48-72h',
+      duration: 'quelques semaines',
     },
     {
       number: '4',
@@ -45,7 +44,7 @@ export default function CommentCaMarchePage() {
     },
     {
       question: 'Combien de temps pour avoir mon site ?',
-      answer: 'En moyenne 48 à 72 heures après validation du projet. Les délais varient selon la complexité de votre projet.',
+      answer: 'En moyenne quelques semaines après validation du projet. Les délais varient selon la complexité de votre projet.',
     },
     {
       question: 'Puis-je modifier mon site après la livraison ?',
@@ -174,21 +173,6 @@ export default function CommentCaMarchePage() {
                 ))}
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* CTA Band */}
-        <section>
-          <div className="vf2-cta-band">
-            <h2>Prêt à démarrer ?</h2>
-            <p>
-              Obtenez votre estimation gratuite en quelques secondes. Sans engagement,
-              réponse rapide, livraison garantie.
-            </p>
-            <Link href="#devis" className="vf2-btn-primary">
-              <ArrowRight size={18} />
-              Estimer mon projet
-            </Link>
           </div>
         </section>
 

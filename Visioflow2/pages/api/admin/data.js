@@ -19,7 +19,7 @@ export default async function handler(req, res) {
       db.collection('site_config').doc('main').get(),
       db.collection('submissions').orderBy('timestamp', 'desc').limit(200).get(),
       db.collection('form_submissions').orderBy('timestamp', 'desc').limit(200).get(),
-      db.collection('client_projects').orderBy('createdAt', 'desc').limit(200).get(),
+      db.collection('projects').orderBy('createdAt', 'desc').limit(200).get(),
     ])
 
     const config = configSnap.exists ? configSnap.data() : null
@@ -27,10 +27,10 @@ export default async function handler(req, res) {
     subsSnap.forEach(d => submissions.push({ id: d.id, ...d.data() }))
     const forms = []
     formsSnap.forEach(d => forms.push({ id: d.id, ...d.data() }))
-    const clientProjects = []
-    projectsSnap.forEach(d => clientProjects.push({ id: d.id, ...d.data() }))
+    const projects = []
+    projectsSnap.forEach(d => projects.push({ id: d.id, ...d.data() }))
 
-    res.status(200).json({ config, submissions, forms, clientProjects })
+    res.status(200).json({ config, submissions, forms, projects })
   } catch (e) {
     console.error('admin/data:', e)
     res.status(500).json({ error: e.message })

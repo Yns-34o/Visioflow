@@ -75,7 +75,6 @@ export default function ServiceMobileFirst() {
           <div className="nav-links">
             <Link href="/landing">Comment ça marche</Link>
             <Link href="/tarifs">Tarifs</Link>
-            <Link href="/temoignages">Témoignages</Link>
             <Link href="/a-propos">À propos</Link>
           </div>
           <Link href="/paiement" className="nav-cta">Commencer →</Link>
@@ -227,7 +226,7 @@ export default function ServiceMobileFirst() {
         <h2>Prêt pour le mobile-first ?</h2>
         <p>
           Tous nos sites sont optimisés mobile par défaut. Pack Essentiel 150€ ou Premium 490€.
-          Livré en 48 heures. Testez sur votre smartphone maintenant.
+          Livré en quelques semaines. Testez sur votre smartphone maintenant.
         </p>
         <div style={{display:'flex',gap:'16px',justifyContent:'center',flexWrap:'wrap'}}>
           <Link href="/vitrine" className="cta-btn">
@@ -246,13 +245,12 @@ export default function ServiceMobileFirst() {
             Visio<span style={{color:'#0071E3'}}>flow</span>
           </p>
           <p style={{color:'rgba(255,255,255,.6)',marginBottom:'24px'}}>
-            Création de sites web pour restaurateurs avec commandes en ligne, livrés en 48 heures.
+            Création de sites web pour restaurateurs avec commandes en ligne, livrés en quelques semaines.
           </p>
           <div style={{display:'flex',gap:'20px',justifyContent:'center',flexWrap:'wrap',marginBottom:'28px'}}>
             <Link href="/" style={{color:'rgba(255,255,255,.5)',textDecoration:'none',transition:'color .2s'}}>Accueil</Link>
             <Link href="/landing" style={{color:'rgba(255,255,255,.5)',textDecoration:'none',transition:'color .2s'}}>Comment ça marche</Link>
             <Link href="/tarifs" style={{color:'rgba(255,255,255,.5)',textDecoration:'none',transition:'color .2s'}}>Tarifs</Link>
-            <Link href="/temoignages" style={{color:'rgba(255,255,255,.5)',textDecoration:'none',transition:'color .2s'}}>Témoignages</Link>
             <Link href="/a-propos" style={{color:"rgba(255,255,255,.5)",textDecoration:"none",transition:"color .2s"}}>À propos</Link>
           </div>
           <p style={{color:'rgba(255,255,255,.3)'}}>© {new Date().getFullYear()} VisioFlow — Tous droits réservés.</p>

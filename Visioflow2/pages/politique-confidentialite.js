@@ -68,7 +68,6 @@ export default function PolitiqueConfidentialite() {
           <div className="nav-links">
             <a href="/landing">Comment ça marche</a>
             <a href="/tarifs">Tarifs</a>
-            <a href="/temoignages">Témoignages</a>
             <a href="/a-propos">À propos</a>
           </div>
           <a href="/paiement" className="nav-cta">Commencer →</a>
@@ -508,7 +507,7 @@ export default function PolitiqueConfidentialite() {
             Visio<span style={{color:'#0071E3'}}>flow</span>
           </p>
           <p style={{color:'#475569',marginBottom:'24px'}}>
-            Création de sites web pour restaurateurs avec commandes en ligne, livrés en 48 heures.
+            Création de sites web pour restaurateurs avec commandes en ligne, livrés en quelques semaines.
           </p>
           <div className="legal-links">
             <a href="/mentions-legales">Mentions légales</a>

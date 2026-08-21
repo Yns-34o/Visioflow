@@ -20,7 +20,7 @@ export default function LoginAdmin() {
       })
       const data = await res.json()
       if (!res.ok) { setErr(data.error || 'Code incorrect'); setLoading(false); return }
-      const dest = router.query.from || '/dashboard'
+      const dest = router.query.from || '/admin'
       router.replace(dest)
     } catch {
       setErr('Erreur réseau')
@@ -59,8 +59,24 @@ export default function LoginAdmin() {
         }}>
           {/* Logo */}
           <div style={{ textAlign: 'center', marginBottom: 32 }}>
-            <div style={{ fontSize: 26, fontWeight: 800, color: '#fff', letterSpacing: '-0.5px', marginBottom: 6 }}>
-              Visio<span style={{ color: '#60a5fa' }}>Flow</span>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 10, marginBottom: 6 }}>
+              <svg viewBox="0 0 44 44" width="30" height="30" fill="none">
+                <defs>
+                  <linearGradient id="vf-login-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#6366f1" />
+                    <stop offset="100%" stopColor="#22d3ee" />
+                  </linearGradient>
+                </defs>
+                <path
+                  d="M22 22 C18 14, 8 14, 8 22 C8 30, 18 30, 22 22 C26 14, 36 14, 36 22 C36 30, 26 30, 22 22"
+                  stroke="url(#vf-login-grad)"
+                  strokeWidth="3.4"
+                  strokeLinecap="round"
+                />
+              </svg>
+              <span style={{ fontFamily: 'Fraunces, serif', fontSize: 26, fontWeight: 800, color: '#fff', letterSpacing: '-0.5px' }}>
+                Visio<span style={{ color: '#22d3ee' }}>flow</span>
+              </span>
             </div>
             <div style={{ fontSize: 13, color: '#64748b' }}>Espace administrateur</div>
           </div>

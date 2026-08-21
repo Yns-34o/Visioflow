@@ -163,11 +163,9 @@ export default function Dashboard() {
   // États pour l'ajout de projet
   const [showAddProject, setShowAddProject] = useState(false)
   const [newProject, setNewProject] = useState({
+    url: '',
     title: '',
-    description: '',
-    image: '',
-    tags: '',
-    link: ''
+    category: 'vitrine'
   })
 
   useEffect(() => {
@@ -202,7 +200,7 @@ export default function Dashboard() {
   const handleDeleteForm = async (formId) => {
     if (!confirm('Supprimer ce formulaire ?')) return
     try {
-      await adminFetch('/api/admin/delete', { id: formId, col: 'form_submissions' })
+      await adminFetch('/api/admin/delete', { id: formId, collection: 'form_submissions' })
       setForms(forms.filter(f => f.id !== formId))
       if (selectedForm?.id === formId) {
         setSelectedForm(null)
@@ -213,39 +211,48 @@ export default function Dashboard() {
     }
   }
 
+  const CATEGORIES = {
+    vitrine: { label: 'Site Vitrine', emoji: '🌐' },
+    ecommerce: { label: 'Vente en ligne', emoji: '🛒' },
+    google: { label: 'Page Google', emoji: '📍' },
+    reseaux: { label: 'Gestion réseaux', emoji: '📱' },
+  }
+
   const handleAddProject = async () => {
-    if (!newProject.title || !newProject.description) {
-      alert('Veuillez remplir au moins le titre et la description')
+    if (!newProject.url) {
+      alert('Veuillez renseigner le lien du site')
       return
     }
 
     try {
       const projectData = {
-        ...newProject,
-        tags: newProject.tags.split(',').map(t => t.trim()).filter(Boolean),
+        url: newProject.url,
+        title: newProject.title,
+        category: newProject.category,
         published: true,
-        createdAt: new Date()
+        createdAt: new Date().toISOString()
       }
 
-      await adminFetch('/api/admin/save', {
+      const saved = await adminFetch('/api/admin/save', {
         col: 'projects',
         data: projectData
       })
+      if (saved?.error) throw new Error(saved.error)
 
-      setProjects([...projects, { ...projectData, id: Date.now().toString() }])
-      setNewProject({ title: '', description: '', image: '', tags: '', link: '' })
+      setProjects([{ ...projectData, id: saved.id || Date.now().toString() }, ...projects])
+      setNewProject({ url: '', title: '', category: 'vitrine' })
       setShowAddProject(false)
-      alert('Projet ajouté avec succès !')
+      alert('Lien ajouté avec succès !')
     } catch (err) {
       console.error('Erreur ajout projet:', err)
-      alert('Erreur lors de l\'ajout du projet')
+      alert('Erreur lors de l\'ajout du lien')
     }
   }
 
   const handleDeleteProject = async (projectId) => {
     if (!confirm('Supprimer ce projet ?')) return
     try {
-      await adminFetch('/api/admin/delete', { id: projectId, col: 'projects' })
+      await adminFetch('/api/admin/delete', { id: projectId, collection: 'projects' })
       setProjects(projects.filter(p => p.id !== projectId))
     } catch (err) {
       console.error('Erreur suppression projet:', err)
@@ -367,66 +374,59 @@ export default function Dashboard() {
 
                 {showAddProject && (
                   <div style={{ background: '#fff', border: '1px solid #e2e8f0', borderRadius: '12px', padding: '20px', marginBottom: '24px' }}>
-                    <h3 style={{ fontSize: '16px', fontWeight: 600, color: '#0f172a', marginBottom: '16px' }}>Nouveau projet</h3>
+                    <h3 style={{ fontSize: '16px', fontWeight: 600, color: '#0f172a', marginBottom: '16px' }}>Nouveau lien</h3>
 
                     <div style={{ display: 'grid', gap: '16px' }}>
                       <div>
-                        <label style={{ fontSize: '13px', fontWeight: 600, color: '#0f172a', marginBottom: '4px', display: 'block' }}>Titre *</label>
+                        <label style={{ fontSize: '13px', fontWeight: 600, color: '#0f172a', marginBottom: '4px', display: 'block' }}>Lien du site *</label>
+                        <input
+                          type="text"
+                          value={newProject.url}
+                          onChange={(e) => setNewProject({...newProject, url: e.target.value})}
+                          placeholder="https://monclient.fr"
+                          style={{ width: '100%', padding: '10px 12px', border: '1px solid #e2e8f0', borderRadius: '8px', fontSize: '14px' }}
+                        />
+                      </div>
+
+                      <div>
+                        <label style={{ fontSize: '13px', fontWeight: 600, color: '#0f172a', marginBottom: '4px', display: 'block' }}>Titre (optionnel — nom du client par défaut)</label>
                         <input
                           type="text"
                           value={newProject.title}
                           onChange={(e) => setNewProject({...newProject, title: e.target.value})}
-                          placeholder="Site E-commerce Mode"
+                          placeholder="Ex : Le Petit Bistrot"
                           style={{ width: '100%', padding: '10px 12px', border: '1px solid #e2e8f0', borderRadius: '8px', fontSize: '14px' }}
                         />
                       </div>
 
                       <div>
-                        <label style={{ fontSize: '13px', fontWeight: 600, color: '#0f172a', marginBottom: '4px', display: 'block' }}>Description *</label>
-                        <textarea
-                          value={newProject.description}
-                          onChange={(e) => setNewProject({...newProject, description: e.target.value})}
-                          placeholder="Boutique en ligne complète avec paiement..."
-                          style={{ width: '100%', padding: '10px 12px', border: '1px solid #e2e8f0', borderRadius: '8px', fontSize: '14px', minHeight: '80px', resize: 'vertical' }}
-                        />
-                      </div>
-
-                      <div>
-                        <label style={{ fontSize: '13px', fontWeight: 600, color: '#0f172a', marginBottom: '4px', display: 'block' }}>URL image</label>
-                        <input
-                          type="url"
-                          value={newProject.image}
-                          onChange={(e) => setNewProject({...newProject, image: e.target.value})}
-                          placeholder="https://..."
-                          style={{ width: '100%', padding: '10px 12px', border: '1px solid #e2e8f0', borderRadius: '8px', fontSize: '14px' }}
-                        />
-                      </div>
-
-                      <div>
-                        <label style={{ fontSize: '13px', fontWeight: 600, color: '#0f172a', marginBottom: '4px', display: 'block' }}>Tags (séparés par virgules)</label>
-                        <input
-                          type="text"
-                          value={newProject.tags}
-                          onChange={(e) => setNewProject({...newProject, tags: e.target.value})}
-                          placeholder="E-commerce, Stripe, Next.js"
-                          style={{ width: '100%', padding: '10px 12px', border: '1px solid #e2e8f0', borderRadius: '8px', fontSize: '14px' }}
-                        />
-                      </div>
-
-                      <div>
-                        <label style={{ fontSize: '13px', fontWeight: 600, color: '#0f172a', marginBottom: '4px', display: 'block' }}>Lien (optionnel)</label>
-                        <input
-                          type="url"
-                          value={newProject.link}
-                          onChange={(e) => setNewProject({...newProject, link: e.target.value})}
-                          placeholder="https://..."
-                          style={{ width: '100%', padding: '10px 12px', border: '1px solid #e2e8f0', borderRadius: '8px', fontSize: '14px' }}
-                        />
+                        <label style={{ fontSize: '13px', fontWeight: 600, color: '#0f172a', marginBottom: '4px', display: 'block' }}>Catégorie</label>
+                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                          {Object.entries(CATEGORIES).map(([key, { label, emoji }]) => (
+                            <button
+                              key={key}
+                              type="button"
+                              onClick={() => setNewProject({...newProject, category: key})}
+                              style={{
+                                padding: '8px 14px',
+                                background: newProject.category === key ? '#0071E3' : '#f1f5f9',
+                                color: newProject.category === key ? '#fff' : '#475569',
+                                border: newProject.category === key ? '1px solid #0071E3' : '1px solid #e2e8f0',
+                                borderRadius: '999px',
+                                fontSize: '13px',
+                                fontWeight: 600,
+                                cursor: 'pointer'
+                              }}
+                            >
+                              {emoji} {label}
+                            </button>
+                          ))}
+                        </div>
                       </div>
 
                       <div style={{ display: 'flex', gap: '8px', justifyContent: 'flex-end' }}>
                         <button
-                          onClick={() => { setShowAddProject(false); setNewProject({ title: '', description: '', image: '', tags: '', link: '' }) }}
+                          onClick={() => { setShowAddProject(false); setNewProject({ url: '', title: '', category: 'vitrine' }) }}
                           style={{ padding: '8px 16px', background: '#f1f5f9', color: '#64748b', border: 'none', borderRadius: '8px', fontSize: '13px', fontWeight: 600, cursor: 'pointer' }}
                         >
                           Annuler
@@ -451,9 +451,11 @@ export default function Dashboard() {
                 ) : (
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '16px' }}>
                     {projects.map(project => (
-                      <div key={project.id} style={{ background: '#fff', border: '1px solid #e2e8f0', borderRadius: '12px', padding: '16px' }}>
-                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '12px' }}>
-                          <h4 style={{ fontSize: '15px', fontWeight: 600, color: '#0f172a', margin: 0, flex: 1 }}>{project.title}</h4>
+                      <div key={project.id} style={{ background: '#fff', border: '1px solid #e2e8f0', borderRadius: '12px', padding: '16px', display: 'flex', flexDirection: 'column' }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '8px' }}>
+                          <span style={{ fontSize: '11px', padding: '3px 10px', background: '#eff6ff', color: '#0071E3', borderRadius: '999px', fontWeight: 600, whiteSpace: 'nowrap' }}>
+                            {CATEGORIES[project.category]?.emoji} {CATEGORIES[project.category]?.label || project.category}
+                          </span>
                           <button
                             onClick={() => handleDeleteProject(project.id)}
                             style={{ padding: '4px 8px', background: '#fee2e2', color: '#dc2626', border: 'none', borderRadius: '4px', fontSize: '11px', fontWeight: 600, cursor: 'pointer' }}
@@ -461,19 +463,11 @@ export default function Dashboard() {
                             🗑
                           </button>
                         </div>
-                        <p style={{ fontSize: '13px', color: '#64748b', lineHeight: '1.5', marginBottom: '12px', maxHeight: '60px', overflow: 'hidden' }}>
-                          {project.description}
-                        </p>
-                        {project.tags && project.tags.length > 0 && (
-                          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px', marginBottom: '8px' }}>
-                            {project.tags.map((tag, i) => (
-                              <span key={i} style={{ fontSize: '11px', padding: '2px 8px', background: '#f1f5f9', color: '#64748b', borderRadius: '12px' }}>
-                                {tag}
-                              </span>
-                            ))}
-                          </div>
-                        )}
-                        <div style={{ fontSize: '11px', color: '#94a3b8' }}>
+                        <h4 style={{ fontSize: '15px', fontWeight: 600, color: '#0f172a', margin: '0 0 4px 0' }}>{project.title}</h4>
+                        <a href={project.url} target="_blank" rel="noopener noreferrer" style={{ fontSize: '13px', color: '#0071E3', textDecoration: 'none', wordBreak: 'break-all', marginBottom: '12px' }}>
+                          {project.url}
+                        </a>
+                        <div style={{ fontSize: '11px', color: '#94a3b8', marginTop: 'auto' }}>
                           {fmtDate(project.createdAt)}
                         </div>
                       </div>

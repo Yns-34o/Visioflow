@@ -22,7 +22,6 @@ export default function Navbar() {
     { href: '/nos-projets', label: 'Nos projets' },
     { href: '/comment-ca-marche', label: 'Comment ça marche' },
     { href: '/a-propos', label: 'À propos' },
-    { href: '/temoignages', label: 'Témoignages' },
   ];
 
   return (
@@ -30,8 +29,19 @@ export default function Navbar() {
       <nav className={`vf2-navbar ${scrolled ? 'scrolled' : ''}`}>
         <div className="vf2-nav-content">
           <Link href="/" className="vf2-logo">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+            <svg viewBox="0 0 44 44" width="34" height="34" fill="none">
+              <defs>
+                <linearGradient id="vf-logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#6366f1" />
+                  <stop offset="100%" stopColor="#22d3ee" />
+                </linearGradient>
+              </defs>
+              <path
+                d="M22 22 C18 14, 8 14, 8 22 C8 30, 18 30, 22 22 C26 14, 36 14, 36 22 C36 30, 26 30, 22 22"
+                stroke="url(#vf-logo-grad)"
+                strokeWidth="3.4"
+                strokeLinecap="round"
+              />
             </svg>
             Visio<span className="vf2-logo-accent">flow</span>
           </Link>

@@ -100,7 +100,7 @@ export default function BlogPhotos() {
 
       <div className="container">
         <div className="cta">
-          <h3>Vos photos sur votre site en 48h</h3>
+          <h3>Vos photos sur votre site en quelques semaines</h3>
           <p>Nous intégrons vos photos professionnelles avec optimisation web automatique.</p>
           <Link href="/tarifs" className="cta-btn">Voir nos tarifs</Link>
         </div>

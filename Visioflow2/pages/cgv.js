@@ -70,7 +70,6 @@ export default function CGV() {
           <div className="nav-links">
             <a href="/landing">Comment ça marche</a>
             <a href="/tarifs">Tarifs</a>
-            <a href="/temoignages">Témoignages</a>
             <a href="/a-propos">À propos</a>
           </div>
           <a href="/paiement" className="nav-cta">Commencer →</a>
@@ -153,12 +152,12 @@ export default function CGV() {
             <tbody>
               <tr>
                 <td><strong>Pack Essentiel</strong></td>
-                <td>Site vitrine professionnel avec menu digital, horaires, photos. Livré en 48h.</td>
+                <td>Site vitrine professionnel avec menu digital, horaires, photos. Livré en quelques semaines.</td>
                 <td className="price-highlight">150 € HT</td>
               </tr>
               <tr>
                 <td><strong>Pack Premium</strong></td>
-                <td>Site complet avec commandes en ligne, panier, paiement intégré, panel admin. Livré en 48h.</td>
+                <td>Site complet avec commandes en ligne, panier, paiement intégré, panel admin. Livré en quelques semaines.</td>
                 <td className="price-highlight">490 € HT</td>
               </tr>
               <tr>
@@ -340,7 +339,7 @@ export default function CGV() {
           </h2>
           <h3 className="article-title">5.1 Délai annoncé</h3>
           <p>
-            Le Vendeur s'engage à livrer le site web dans un délai de <strong>48 heures</strong>
+            Le Vendeur s'engage à livrer le site web dans un délai de <strong>quelques semaines</strong>
             à compter de la réception de toutes les informations nécessaires et des éléments
             fournis par le Client (photos, menu, informations restaurant).
           </p>
@@ -572,7 +571,7 @@ export default function CGV() {
           <h3 className="article-title">10.3 Délai de réponse</h3>
           <p>
             Le Vendeur s'engage à répondre aux demandes de support dans un délai de
-            <strong>48 heures</strong> ouvrées. Pour les urgences, un délai plus court sera
+            <strong>quelques semaines</strong> ouvrées. Pour les urgences, un délai plus court sera
             visé autant que possible.
           </p>
 
@@ -716,7 +715,7 @@ export default function CGV() {
             Visio<span style={{color:'#0071E3'}}>flow</span>
           </p>
           <p style={{color:'#475569',marginBottom:'24px'}}>
-            Création de sites web pour restaurateurs avec commandes en ligne, livrés en 48 heures.
+            Création de sites web pour restaurateurs avec commandes en ligne, livrés en quelques semaines.
           </p>
           <div className="legal-links">
             <a href="/mentions-legales">Mentions légales</a>

@@ -10,12 +10,12 @@ export default function BlogComparatifWix() {
         <title>Comparatif VisioFlow vs Wix pour Restaurant | 2025</title>
         <meta
           name="description"
-          content="Comparatif complet VisioFlow vs Wix pour créer un site web restaurant. Prix, délai, fonctionnalités, avantages. VisioFlow 150€ vs Wix 20-40€/mois. Sans abonnement, livré en 48h."
+          content="Comparatif complet VisioFlow vs Wix pour créer un site web restaurant. Prix, délai, fonctionnalités, avantages. VisioFlow 150€ vs Wix 20-40€/mois. Sans abonnement, livré en quelques semaines."
         />
         <link rel="canonical" href={canonicalUrl} />
         <meta name="robots" content="index, follow" />
         <meta property="og:title" content="Comparatif VisioFlow vs Wix pour Restaurant | 2025" />
-        <meta property="og:description" content="Comparatif complet VisioFlow vs Wix pour créer un site web restaurant. Prix, délai, fonctionnalités, avantages. VisioFlow 150€ vs Wix 20-40€/mois. Sans abonnement, livré en 48h." />
+        <meta property="og:description" content="Comparatif complet VisioFlow vs Wix pour créer un site web restaurant. Prix, délai, fonctionnalités, avantages. VisioFlow 150€ vs Wix 20-40€/mois. Sans abonnement, livré en quelques semaines." />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:type" content="article" />
         <meta property="og:locale" content="fr_FR" />
@@ -79,7 +79,6 @@ export default function BlogComparatifWix() {
             <Link href="/landing">Comment ça marche</Link>
             <Link href="/tarifs">Tarifs</Link>
             <Link href="/blog">Blog</Link>
-            <Link href="/temoignages">Témoignages</Link>
           </div>
           <Link href="/paiement" className="nav-cta">Commencer →</Link>
         </div>
@@ -122,7 +121,7 @@ export default function BlogComparatifWix() {
             </tr>
             <tr>
               <td><strong>Délai de livraison</strong></td>
-              <td className="winner"><span className="highlight">48 heures</span></td>
+              <td className="winner"><span className="highlight">Quelques semaines</span></td>
               <td>2-4 semaines</td>
             </tr>
             <tr>
@@ -193,7 +192,7 @@ export default function BlogComparatifWix() {
             <ul className="pros-cons-list">
               <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#34d399" strokeWidth="2"><path d="M20 6L9 17l-5-5"/></svg> Spécialiste restauration</li>
               <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#34d399" strokeWidth="2"><path d="M20 6L9 17l-5-5"/></svg> Aucun abonnement mensuel</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#34d399" strokeWidth="2"><path d="M20 6L9 17l-5-5"/></svg> Livré en 48 heures</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#34d399" strokeWidth="2"><path d="M20 6L9 17l-5-5"/></svg> Livré en quelques semaines</li>
               <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#34d399" strokeWidth="2"><path d="M20 6L9 17l-5-5"/></svg> Support restaurant-focused</li>
               <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#34d399" strokeWidth="2"><path d="M20 6L9 17l-5-5"/></svg> Commandes en ligne intégrées</li>
               <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#34d399" strokeWidth="2"><path d="M20 6L9 17l-5-5"/></svg> SEO local optimisé</li>
@@ -224,7 +223,7 @@ export default function BlogComparatifWix() {
         <div className="cta">
           <h3>Choisissez VisioFlow pour votre restaurant</h3>
           <p>
-            Sans abonnement, livré en 48 heures, spécialiste restauration.
+            Sans abonnement, livré en quelques semaines, spécialiste restauration.
             Pack Essentiel 150€ ou Premium 490€.
           </p>
           <Link href="/tarifs" className="cta-btn">
@@ -239,13 +238,12 @@ export default function BlogComparatifWix() {
           Visio<span style={{color:'#0071E3'}}>flow</span>
         </p>
         <p style={{color:'rgba(255,255,255,.6)',marginBottom:'24px'}}>
-          Création de sites web pour restaurateurs avec commandes en ligne, livrés en 48 heures.
+          Création de sites web pour restaurateurs avec commandes en ligne, livrés en quelques semaines.
         </p>
         <div style={{display:'flex',gap:'20px',justifyContent:'center',flexWrap:'wrap',marginBottom:'28px'}}>
           <Link href="/" style={{color:'rgba(255,255,255,.5)',textDecoration:'none',transition:'color .2s'}}>Accueil</Link>
           <Link href="/landing" style={{color:'rgba(255,255,255,.5)',textDecoration:'none',transition:'color .2s'}}>Comment ça marche</Link>
           <Link href="/tarifs" style={{color:'rgba(255,255,255,.5)',textDecoration:'none',transition:'color .2s'}}>Tarifs</Link>
-          <Link href="/temoignages" style={{color:'rgba(255,255,255,.5)',textDecoration:'none',transition:'color .2s'}}>Témoignages</Link>
           <Link href="/a-propos" style={{color:'rgba(255,255,255,.5)',textDecoration:'none',transition:'color .2s'}}>À propos</Link>
         </div>
         <p style={{color:'rgba(255,255,255,.3)'}}>© {new Date().getFullYear()} VisioFlow — Tous droits réservés.</p>

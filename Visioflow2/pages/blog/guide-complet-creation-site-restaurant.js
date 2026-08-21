@@ -81,7 +81,7 @@ export default function BlogGuideComplet() {
                   "name": "Combien de temps faut-il pour créer un site web restaurant ?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Avec VisioFlow, votre site web restaurant est livré en 48 heures après confirmation de votre commande. Notre processus optimisé garantit une livraison rapide sans compromis sur la qualité. Les agences web traditionnelles prennent généralement 2-4 semaines."
+                    "text": "Avec VisioFlow, votre site web restaurant est livré en quelques semaines après confirmation de votre commande. Notre processus optimisé garantit une livraison rapide sans compromis sur la qualité. Les agences web traditionnelles prennent généralement 2-4 semaines."
                   }
                 },
                 {
@@ -206,7 +206,6 @@ export default function BlogGuideComplet() {
             <Link href="/landing">Comment ça marche</Link>
             <Link href="/tarifs">Tarifs</Link>
             <Link href="/blog">Blog</Link>
-            <Link href="/temoignages">Témoignages</Link>
           </div>
           <Link href="/paiement" className="nav-cta">Commencer →</Link>
         </div>
@@ -333,14 +332,14 @@ export default function BlogGuideComplet() {
           <ul>
             <li><strong>Faire soi-même (WordPress, Wix, Squarespace)</strong> : Économique (0-50€) mais demande du temps et des compétences techniques. Abonnements mensuels (20-40€).</li>
             <li><strong>Agence web traditionnelle</strong> : Sur mesure (2000-10,000€) mais délai de 2-4 semaines. Souvent des frais mensuels d'hébergement.</li>
-            <li><strong>Solution spécialisée restauration (VisioFlow)</strong> : Adapté à vos besoins (150-490€), livré en 48 heures, sans abonnement. Hébergement à vie inclus.</li>
+            <li><strong>Solution spécialisée restauration (VisioFlow)</strong> : Adapté à vos besoins (150-490€), livré en quelques semaines, sans abonnement. Hébergement à vie inclus.</li>
           </ul>
 
           {/* CTA */}
           <div className="cta">
             <h3>Prêt à créer votre site web restaurant ?</h3>
             <p>
-              Choisissez entre le Pack Essentiel (150€) ou Premium (490€). Livré en 48 heures,
+              Choisissez entre le Pack Essentiel (150€) ou Premium (490€). Livré en quelques semaines,
               sans abonnement. Hébergement à vie inclus.
             </p>
             <div style={{display:'flex',gap:'16px',justifyContent:'center',flexWrap:'wrap'}}>
@@ -359,13 +358,12 @@ export default function BlogGuideComplet() {
               Visio<span style={{color:'#0071E3'}}>flow</span>
             </p>
             <p style={{color:'rgba(255,255,255,.6)',marginBottom:'24px'}}>
-              Création de sites web pour restaurateurs avec commandes en ligne, livrés en 48 heures.
+              Création de sites web pour restaurateurs avec commandes en ligne, livrés en quelques semaines.
             </p>
             <div style={{display:'flex',gap:'20px',justifyContent:'center',flexWrap:'wrap',marginBottom:'28px'}}>
               <Link href="/" style={{color:'rgba(255,255,255,.5)',textDecoration:'none',transition:'color .2s'}}>Accueil</Link>
               <Link href="/landing" style={{color:'rgba(255,255,255,.5)',textDecoration:'none',transition:'color .2s'}}>Comment ça marche</Link>
               <Link href="/tarifs" style={{color:'rgba(255,255,255,.5)',textDecoration:'none',transition:'color .2s'}}>Tarifs</Link>
-              <Link href="/temoignages" style={{color:'rgba(255,255,255,.5)',textDecoration:'none',transition:'color .2s'}}>Témoignages</Link>
               <Link href="/a-propos" style={{color:'rgba(255,255,255,.5)',textDecoration:'none',transition:'color .2s'}}>À propos</Link>
             </div>
             <p style={{color:'rgba(255,255,255,.3)'}}>© {new Date().getFullYear()} VisioFlow — Tous droits réservés.</p>

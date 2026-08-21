@@ -7,15 +7,15 @@ export default function ServiceLyon() {
   return (
     <>
       <Head>
-        <title>Création Site Web Restaurant Lyon | VisioFlow 150€-490€ | Livré 48h</title>
+        <title>Création Site Web Restaurant Lyon | VisioFlow 150€-490€ | Livré en quelques semaines</title>
         <meta
           name="description"
-          content="VisioFlow crée votre site web restaurant à Lyon en 48 heures. Pack Essentiel 150€ ou Premium 490€. Sans abonnement, hébergement à vie inclus. Spécialiste restauration lyonnaise."
+          content="VisioFlow crée votre site web restaurant à Lyon en quelques semaines. Pack Essentiel 150€ ou Premium 490€. Sans abonnement, hébergement à vie inclus. Spécialiste restauration lyonnaise."
         />
         <link rel="canonical" href={canonicalUrl} />
         <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Création Site Web Restaurant Lyon | VisioFlow 150€-490€ | Livré 48h" />
-        <meta property="og:description" content="VisioFlow crée votre site web restaurant à Lyon en 48 heures. Pack Essentiel 150€ ou Premium 490€. Sans abonnement, hébergement à vie inclus. Spécialiste restauration lyonnaise." />
+        <meta property="og:title" content="Création Site Web Restaurant Lyon | VisioFlow 150€-490€ | Livré en quelques semaines" />
+        <meta property="og:description" content="VisioFlow crée votre site web restaurant à Lyon en quelques semaines. Pack Essentiel 150€ ou Premium 490€. Sans abonnement, hébergement à vie inclus. Spécialiste restauration lyonnaise." />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="fr_FR" />
@@ -130,7 +130,6 @@ export default function ServiceLyon() {
           <div className="nav-links">
             <Link href="/landing">Comment ça marche</Link>
             <Link href="/tarifs">Tarifs</Link>
-            <Link href="/temoignages">Témoignages</Link>
             <Link href="/a-propos">À propos</Link>
           </div>
           <Link href="/paiement" className="nav-cta">Commencer →</Link>
@@ -152,7 +151,7 @@ export default function ServiceLyon() {
           <p className="hero-sub">
             Spécialiste de la restauration lyonnaise. Nous créons des sites web professionnels
             pour bouchons, restaurants traditionnels et brasseries dans toute l'agglomération lyonnaise.
-            Livré en 48 heures, sans abonnement.
+            Livré en quelques semaines, sans abonnement.
           </p>
           <div style={{display:'flex',gap:'16px',justifyContent:'center',flexWrap:'wrap',marginTop:'32px'}}>
             <Link href="/paiement?pack=essentiel" style={{padding:'16px 40px',borderRadius:'50px',background:'#0071E3',color:'#fff',fontSize:'16px',fontWeight:700,textDecoration:'none',transition:'all .3s'}}>
@@ -284,7 +283,7 @@ export default function ServiceLyon() {
 
       {/* CTA Section */}
       <div className="cta">
-        <h2>Restaurant à Lyon ? Votre site en 48h</h2>
+        <h2>Restaurant à Lyon ? Votre site en quelques semaines</h2>
         <p>
           Spécialiste de la restauration lyonnaise depuis 2025. 60+ restaurants accompagnés.
           Pack Essentiel 150€ ou Premium 490€. Sans abonnement.
@@ -292,9 +291,6 @@ export default function ServiceLyon() {
         <div style={{display:'flex',gap:'16px',justifyContent:'center',flexWrap:'wrap'}}>
           <Link href="/paiement?pack=premium" className="cta-btn">
             Créer mon site lyonnais
-          </Link>
-          <Link href="/temoignages" style={{padding:'16px 40px',borderRadius:'50px',background:'rgba(255,255,255,.2)',color:'#fff',border:'2px solid rgba(255,255,255,.3)',fontSize:'16px',fontWeight:700,textDecoration:'none',display:'inline-block',transition:'all .3s'}}>
-            Voir avis lyonnais
           </Link>
         </div>
       </div>
@@ -306,13 +302,12 @@ export default function ServiceLyon() {
             Visio<span style={{color:'#0071E3'}}>flow</span>
           </p>
           <p style={{color:'rgba(255,255,255,.6)',marginBottom:'24px'}}>
-            Création de sites web pour restaurateurs avec commandes en ligne, livrés en 48 heures.
+            Création de sites web pour restaurateurs avec commandes en ligne, livrés en quelques semaines.
           </p>
           <div style={{display:'flex',gap:'20px',justifyContent:'center',flexWrap:'wrap',marginBottom:'28px'}}>
             <Link href="/" style={{color:'rgba(255,255,255,.5)',textDecoration:'none',transition:'color .2s'}}>Accueil</Link>
             <Link href="/landing" style={{color:'rgba(255,255,255,.5)',textDecoration:'none',transition:'color .2s'}}>Comment ça marche</Link>
             <Link href="/tarifs" style={{color:'rgba(255,255,255,.5)',textDecoration:'none',transition:'color .2s'}}>Tarifs</Link>
-            <Link href="/temoignages" style={{color:'rgba(255,255,255,.5)',textDecoration:'none',transition:'color .2s'}}>Témoignages</Link>
             <Link href="/a-propos" style={{color:'rgba(255,255,255,.5)',textDecoration:'none',transition:'color .2s'}}>À propos</Link>
           </div>
           <p style={{color:'rgba(255,255,255,.3)'}}>© {new Date().getFullYear()} VisioFlow Lyon — Tous droits réservés.</p>

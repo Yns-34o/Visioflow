@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
-import Link from 'next/link';
 import { Heart, Users, Zap, Target } from 'lucide-react';
 
 const canonicalUrl = "https://visioflow.fr/a-propos";
@@ -11,7 +10,7 @@ export default function About() {
     {
       icon: Heart,
       title: 'Passion du Design',
-      description: 'Nous créons des sites qui donnent envie d\'acheter, avec une attention particulière à l\'esthétique et à l\'expérience utilisateur.',
+      description: 'Une attention particulière portée à l\'esthétique et à l\'expérience utilisateur, sur tous vos supports digitaux.',
     },
     {
       icon: Users,
@@ -21,7 +20,7 @@ export default function About() {
     {
       icon: Zap,
       title: 'Réactivité',
-      description: 'Devis gratuit, réponse rapide, livraison sans délai. Nous respectons votre temps et votre investissement.',
+      description: 'Chaque demande est traitée rapidement, chaque livraison respecte ses délais. Nous respectons votre temps et votre investissement.',
     },
     {
       icon: Target,
@@ -36,7 +35,7 @@ export default function About() {
         <title>À Propos — Visioflow | Agence web & communication digitale</title>
         <meta
           name="description"
-          content="Visioflow est une agence web spécialisée dans la création de sites vitrines et e-commerce, l'optimisation Google Business et la gestion des réseaux sociaux pour tous types d'activités."
+          content="Visioflow est une agence web spécialisée dans la création de sites vitrines et e-commerce, l'optimisation Google Business et la gestion des réseaux sociaux pour artisans, commerçants et entreprises."
         />
         <link rel="canonical" href={canonicalUrl} />
         <meta name="robots" content="index, follow" />
@@ -55,7 +54,7 @@ export default function About() {
               "name": "VisioFlow",
               "url": "https://visioflow.fr",
               "logo": "https://visioflow.fr/logo.png",
-              "description": "Service de création de sites web pour restaurants avec système de commande en ligne, livré en 48 heures. Spécialisé dans les restaurateurs en France.",
+              "description": "Service de création de sites web pour restaurants avec système de commande en ligne, livré en quelques semaines. Spécialisé dans les restaurateurs en France.",
               "foundingDate": "2025",
               "sameAs": [
                 "https://instagram.com/visioflow",
@@ -99,8 +98,8 @@ export default function About() {
               Une agence web <span className="vf2-serif-italic">passionnée</span> par votre succès
             </h1>
             <p className="vf2-text">
-              Visioflow réalise vos projets web et digitaux avec passion et expertise.
-              Sites web, Google Business, réseaux sociaux — tous les services dont vous avez besoin.
+              Visioflow réalise vos projets web et digitaux avec passion et expertise,
+              de la première idée à la mise en ligne.
             </p>
           </div>
         </section>
@@ -112,8 +111,8 @@ export default function About() {
               <div>
                 <h2 className="vf2-h2">Notre Histoire</h2>
                 <p className="vf2-text" style={{ marginBottom: '16px' }}>
-                  Fondée en 2025, Visioflow est née d'une conviction : chaque mérite une présence
-                  digitale qui donne envie. Pas de templates génériques, mais des créations uniques
+                  Fondée en 2025, Visioflow est née d'une conviction : chaque activité mérite une présence
+                  digitale à son image. Pas de templates génériques, mais des créations uniques
                   qui reflètent votre identité.
                 </p>
                 <p className="vf2-text">
@@ -133,12 +132,12 @@ export default function About() {
                 <div style={{ marginTop: '24px', paddingTop: '24px', borderTop: '1px solid rgba(0, 113, 227, 0.1)' }}>
                   <div style={{ display: 'flex', gap: '32px' }}>
                     <div>
-                      <div style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--vf2-blue)', fontFamily: 'Inter Tight, sans-serif' }}>48h</div>
-                      <div style={{ fontSize: '13px', color: 'var(--vf2-muted)', textTransform: 'uppercase', letterSpacing: '0.05em', marginTop: '4px' }}>Livraison</div>
-                    </div>
-                    <div>
                       <div style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--vf2-blue)', fontFamily: 'Inter Tight, sans-serif' }}>100%</div>
                       <div style={{ fontSize: '13px', color: 'var(--vf2-muted)', textTransform: 'uppercase', letterSpacing: '0.05em', marginTop: '4px' }}>Sur-mesure</div>
+                    </div>
+                    <div>
+                      <div style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--vf2-blue)', fontFamily: 'Inter Tight, sans-serif' }}>Incluses</div>
+                      <div style={{ fontSize: '13px', color: 'var(--vf2-muted)', textTransform: 'uppercase', letterSpacing: '0.05em', marginTop: '4px' }}>Révisions</div>
                     </div>
                   </div>
                 </div>
@@ -169,21 +168,6 @@ export default function About() {
                 );
               })}
             </div>
-          </div>
-        </section>
-
-        {/* CTA Band */}
-        <section>
-          <div className="vf2-cta-band">
-            <h2>Rejoignez nos clients satisfaits</h2>
-            <p>
-              Contactez-nous pour discuter de votre projet. Devis gratuit, réponse rapide,
-              livraison sans compromis sur la qualité.
-            </p>
-            <Link href="#devis" className="vf2-btn-primary">
-              <Zap size={18} />
-              Démarrer votre projet
-            </Link>
           </div>
         </section>
 

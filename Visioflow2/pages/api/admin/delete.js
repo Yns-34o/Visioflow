@@ -10,17 +10,18 @@ function checkAuth(req) {
   return !!process.env.ADMIN_TOKEN && cookies.vf_admin === process.env.ADMIN_TOKEN
 }
 
-const ALLOWED = ['submissions', 'form_submissions', 'client_projects']
+const ALLOWED = ['submissions', 'form_submissions', 'projects']
 
 export default async function handler(req, res) {
   if (!checkAuth(req)) return res.status(401).json({ error: 'Non autorisé' })
   if (req.method !== 'POST') return res.status(405).end()
 
   try {
-    const { collection, id } = req.body
-    if (!ALLOWED.includes(collection) || !id)
+    const { collection, col, id } = req.body || {}
+    const name = ALLOWED.includes(collection) ? collection : (ALLOWED.includes(col) ? col : null)
+    if (!name || !id)
       return res.status(400).json({ error: 'Paramètres invalides' })
-    await db.collection(collection).doc(id).delete()
+    await db.collection(name).doc(id).delete()
     res.status(200).json({ ok: true })
   } catch (e) {
     console.error('admin/delete:', e)

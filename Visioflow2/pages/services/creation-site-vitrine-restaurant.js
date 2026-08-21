@@ -10,12 +10,12 @@ export default function ServiceSiteVitrine() {
         <title>Création Site Vitrine Restaurant | VisioFlow 150€ - Sans Abonnement</title>
         <meta
           name="description"
-          content="VisioFlow crée votre site vitrine restaurant professionnel en 48 heures. Menu digital, horaires, photos, responsive mobile. Pack Essentiel 150€ sans abonnement, hébergement à vie inclus."
+          content="VisioFlow crée votre site vitrine restaurant professionnel en quelques semaines. Menu digital, horaires, photos, responsive mobile. Pack Essentiel 150€ sans abonnement, hébergement à vie inclus."
         />
         <link rel="canonical" href={canonicalUrl} />
         <meta name="robots" content="index, follow" />
         <meta property="og:title" content="Création Site Vitrine Restaurant | VisioFlow 150€ - Sans Abonnement" />
-        <meta property="og:description" content="VisioFlow crée votre site vitrine restaurant professionnel en 48 heures. Menu digital, horaires, photos, responsive mobile. Pack Essentiel 150€ sans abonnement, hébergement à vie inclus." />
+        <meta property="og:description" content="VisioFlow crée votre site vitrine restaurant professionnel en quelques semaines. Menu digital, horaires, photos, responsive mobile. Pack Essentiel 150€ sans abonnement, hébergement à vie inclus." />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="fr_FR" />
@@ -61,7 +61,7 @@ export default function ServiceSiteVitrine() {
               "@type": "Product",
               "name": "Pack Essentiel - Site Vitrine Restaurant",
               "image": "https://visioflow.fr/images/pack-essentiel.jpg",
-              "description": "Site vitrine professionnel pour restaurant avec menu digital, horaires et photos. Livré en 48 heures. Hébergement à vie inclus.",
+              "description": "Site vitrine professionnel pour restaurant avec menu digital, horaires et photos. Livré en quelques semaines. Hébergement à vie inclus.",
               "brand": {
                 "@type": "Brand",
                 "name": "VisioFlow"
@@ -149,7 +149,6 @@ export default function ServiceSiteVitrine() {
           <div className="nav-links">
             <Link href="/landing">Comment ça marche</Link>
             <Link href="/tarifs">Tarifs</Link>
-            <Link href="/temoignages">Témoignages</Link>
             <Link href="/a-propos">À propos</Link>
           </div>
           <Link href="/paiement?pack=essentiel" className="nav-cta">Commencer →</Link>
@@ -166,7 +165,7 @@ export default function ServiceSiteVitrine() {
           </div>
           <h1 className="hero-title">
             Création site vitrine restaurant<br />
-            professionnel en 48 heures
+            professionnel en quelques semaines
           </h1>
           <p className="hero-sub">
             Présentez votre restaurant avec un site web moderne, élégant et fonctionnel.
@@ -295,9 +294,9 @@ export default function ServiceSiteVitrine() {
             </div>
             <div className="step-card">
               <div className="step-number">3</div>
-              <h3 className="step-title">Recevez votre site en 48h</h3>
+              <h3 className="step-title">Recevez votre site en quelques semaines</h3>
               <p className="step-desc">
-                Votre site vitrine restaurant est livré en 48 heures. Révision possible,
+                Votre site vitrine restaurant est livré en quelques semaines. Révision possible,
                 modifications gratuites pour finaliser votre site parfait.
               </p>
             </div>
@@ -335,7 +334,7 @@ export default function ServiceSiteVitrine() {
                 </div>
                 <div className="comparison-item check">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                  Livré en 48 heures
+                  Livré en quelques semaines
                 </div>
                 <div className="comparison-item check">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg>
@@ -387,7 +386,7 @@ export default function ServiceSiteVitrine() {
       <div className="cta">
         <h2>Prêt à créer votre site vitrine restaurant ?</h2>
         <p>
-          Pack Essentiel à 150€, livré en 48 heures. Sans abonnement, hébergement à vie inclus.
+          Pack Essentiel à 150€, livré en quelques semaines. Sans abonnement, hébergement à vie inclus.
           Rejoignez les 150+ restaurateurs qui nous font confiance.
         </p>
         <div style={{display:'flex',gap:'16px',justifyContent:'center',flexWrap:'wrap'}}>
@@ -407,13 +406,12 @@ export default function ServiceSiteVitrine() {
             Visio<span style={{color:'#0071E3'}}>flow</span>
           </p>
           <p style={{color:'rgba(255,255,255,.6)',marginBottom:'24px'}}>
-            Création de sites web pour restaurateurs avec commandes en ligne, livrés en 48 heures.
+            Création de sites web pour restaurateurs avec commandes en ligne, livrés en quelques semaines.
           </p>
           <div style={{display:'flex',gap:'20px',justifyContent:'center',flexWrap:'wrap',marginBottom:'28px'}}>
             <Link href="/" style={{color:'rgba(255,255,255,.5)',textDecoration:'none',transition:'color .2s'}}>Accueil</Link>
             <Link href="/landing" style={{color:'rgba(255,255,255,.5)',textDecoration:'none',transition:'color .2s'}}>Comment ça marche</Link>
             <Link href="/tarifs" style={{color:'rgba(255,255,255,.5)',textDecoration:'none',transition:'color .2s'}}>Tarifs</Link>
-            <Link href="/temoignages" style={{color:'rgba(255,255,255,.5)',textDecoration:'none',transition:'color .2s'}}>Témoignages</Link>
             <Link href="/a-propos" style={{color:'rgba(255,255,255,.5)',textDecoration:'none',transition:'color .2s'}}>À propos</Link>
           </div>
           <p style={{color:'rgba(255,255,255,.3)'}}>© {new Date().getFullYear()} VisioFlow — Tous droits réservés.</p>

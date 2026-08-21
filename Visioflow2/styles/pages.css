@@ -110,21 +110,21 @@
 }
 
 .vf2-logo {
-  font-family: 'Inter Tight', sans-serif;
+  font-family: 'Fraunces', serif;
   font-size: 26px;
-  font-weight: 900;
+  font-weight: 800;
   color: var(--vf2-ink);
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 8px;
   letter-spacing: -0.02em;
   flex-shrink: 0;
 }
 
 .vf2-logo svg {
-  width: 36px;
-  height: 36px;
-  color: var(--vf2-blue);
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
 }
 
 .vf2-logo-accent {
@@ -1060,4 +1060,146 @@
 .vf2-card.fc.vf-in {
   opacity: 1;
   transform: translateY(0);
+}
+/* ── MOCKUP ÉCRANS VISIOFLOW (HTML/CSS purs — pas d'images) ───────────────────── */
+.vf2-screen {
+  position: relative;
+  background: #0f172a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0, 102, 255, 0.18);
+}
+
+.vf2-screen-laptop {
+  width: 100%;
+  max-width: 620px;
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+.vf2-screen-phone {
+  width: 150px;
+  border-radius: 22px;
+  border: 3px solid #1e293b;
+  z-index: 1;
+  align-self: flex-end;
+  margin-bottom: 30px;
+}
+
+.vf2-screen-tablet {
+  width: 190px;
+  border-radius: 18px;
+  border: 3px solid #1e293b;
+  z-index: 1;
+  align-self: flex-start;
+  margin-top: 10px;
+}
+
+.vf2-screen-notch {
+  width: 44px;
+  height: 5px;
+  border-radius: 3px;
+  background: #334155;
+  margin: 8px auto 0;
+}
+
+.vf2-screen-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  background: #1e293b;
+}
+
+.vf2-screen-bar span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #475569;
+}
+
+.vf2-screen-url {
+  flex: 1;
+  max-width: 200px;
+  margin: 0 auto;
+  padding: 3px 10px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #94a3b8;
+  font-size: 10px;
+  text-align: center;
+  font-family: 'Inter Tight', sans-serif;
+}
+
+.vf2-screen-body {
+  padding: 18px 20px 22px;
+  background:
+    radial-gradient(ellipse at top, rgba(99, 102, 241, 0.22), transparent 60%),
+    radial-gradient(ellipse at bottom right, rgba(34, 211, 238, 0.14), transparent 55%),
+    #0f172a;
+}
+
+.vf2-screen-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 26px;
+}
+
+.vf2-screen-logo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #fff;
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.vf2-screen-navlink {
+  width: 30px;
+  height: 6px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.vf2-screen-hero {
+  padding: 26px 0 30px;
+}
+
+.vf2-screen-btn {
+  width: 90px;
+  height: 18px;
+  margin: 0 auto;
+  border-radius: 9px;
+  background: linear-gradient(90deg, #6366f1, #22d3ee);
+}
+
+.vf2-screen-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.vf2-screen-card {
+  height: 52px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 900px) {
+  .vf2-screen-tablet {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .vf2-screen-phone {
+    display: none;
+  }
+  .vf2-screen-laptop {
+    max-width: 100%;
+  }
 }

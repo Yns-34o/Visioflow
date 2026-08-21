@@ -10,12 +10,12 @@ export default function ServiceCommandesLigne() {
         <title>Site Restaurant avec Commandes en Ligne | Pack Premium 490€</title>
         <meta
           name="description"
-          content="VisioFlow crée votre site restaurant avec commandes en ligne, panier et paiement intégré. Pack Premium 490€, livré en 48 heures. Sans abonnement, hébergement à vie inclus."
+          content="VisioFlow crée votre site restaurant avec commandes en ligne, panier et paiement intégré. Pack Premium 490€, livré en quelques semaines. Sans abonnement, hébergement à vie inclus."
         />
         <link rel="canonical" href={canonicalUrl} />
         <meta name="robots" content="index, follow" />
         <meta property="og:title" content="Site Restaurant avec Commandes en Ligne | Pack Premium 490€" />
-        <meta property="og:description" content="VisioFlow crée votre site restaurant avec commandes en ligne, panier et paiement intégré. Pack Premium 490€, livré en 48 heures. Sans abonnement, hébergement à vie inclus." />
+        <meta property="og:description" content="VisioFlow crée votre site restaurant avec commandes en ligne, panier et paiement intégré. Pack Premium 490€, livré en quelques semaines. Sans abonnement, hébergement à vie inclus." />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="fr_FR" />
@@ -127,7 +127,6 @@ export default function ServiceCommandesLigne() {
           <div className="nav-links">
             <Link href="/landing">Comment ça marche</Link>
             <Link href="/tarifs">Tarifs</Link>
-            <Link href="/temoignages">Témoignages</Link>
             <Link href="/a-propos">À propos</Link>
           </div>
           <Link href="/paiement?pack=premium" className="nav-cta">Commencer →</Link>
@@ -148,7 +147,7 @@ export default function ServiceCommandesLigne() {
           </h1>
           <p className="hero-sub">
             Acceptez les commandes directement sur votre site web. Panier fonctionnel,
-            paiement sécurisé, gestion des commandes via panel admin. Livré en 48 heures.
+            paiement sécurisé, gestion des commandes via panel admin. Livré en quelques semaines.
           </p>
           <div className="hero-price">490€ <span>/ unique</span></div>
           <div className="platforms">
@@ -309,7 +308,7 @@ export default function ServiceCommandesLigne() {
       <div className="cta">
         <h2>Prêt à accepter les commandes en ligne ?</h2>
         <p>
-          Pack Premium à 490€, livré en 48 heures. Sans abonnement, hébergement à vie inclus.
+          Pack Premium à 490€, livré en quelques semaines. Sans abonnement, hébergement à vie inclus.
           Augmentez votre chiffre d'affaires avec les commandes en ligne.
         </p>
         <div style={{display:'flex',gap:'16px',justifyContent:'center',flexWrap:'wrap'}}>
@@ -329,13 +328,12 @@ export default function ServiceCommandesLigne() {
             Visio<span style={{color:'#0071E3'}}>flow</span>
           </p>
           <p style={{color:'rgba(255,255,255,.6)',marginBottom:'24px'}}>
-            Création de sites web pour restaurateurs avec commandes en ligne, livrés en 48 heures.
+            Création de sites web pour restaurateurs avec commandes en ligne, livrés en quelques semaines.
           </p>
           <div style={{display:'flex',gap:'20px',justifyContent:'center',flexWrap:'wrap',marginBottom:'28px'}}>
             <Link href="/" style={{color:'rgba(255,255,255,.5)',textDecoration:'none',transition:'color .2s'}}>Accueil</Link>
             <Link href="/landing" style={{color:'rgba(255,255,255,.5)',textDecoration:'none',transition:'color .2s'}}>Comment ça marche</Link>
             <Link href="/tarifs" style={{color:'rgba(255,255,255,.5)',textDecoration:'none',transition:'color .2s'}}>Tarifs</Link>
-            <Link href="/temoignages" style={{color:'rgba(255,255,255,.5)',textDecoration:'none',transition:'color .2s'}}>Témoignages</Link>
             <Link href="/a-propos" style={{color:"rgba(255,255,255,.5)",textDecoration:"none",transition:"color .2s"}}>À propos</Link>
           </div>
           <p style={{color:'rgba(255,255,255,.3)'}}>© {new Date().getFullYear()} VisioFlow — Tous droits réservés.</p>

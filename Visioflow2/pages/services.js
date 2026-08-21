@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
-import Link from 'next/link';
 import { Globe, MapPin, Smartphone, Check, Star } from 'lucide-react';
 
 export default function ServicesPage() {
@@ -93,8 +92,8 @@ export default function ServicesPage() {
               Des solutions <span className="vf2-serif-italic">complètes</span> pour votre présence digitale
             </h1>
             <p className="vf2-text">
-              Sites web, Google Business, et réseaux sociaux — tous les services dont vous avez besoin
-              pour réussir en ligne, avec des tarifs transparents.
+              Du site vitrine à la gestion de vos réseaux sociaux, choisissez les prestations
+              adaptées à vos objectifs, avec des tarifs transparents.
             </p>
           </div>
         </section>
@@ -135,28 +134,13 @@ export default function ServicesPage() {
                       ))}
                     </ul>
 
-                    <Link href="#devis" className="vf2-btn-ghost" style={{ width: '100%', justifyContent: 'center' }}>
+                    <a href="mailto:contact@visioflow.fr" className="vf2-btn-ghost" style={{ width: '100%', justifyContent: 'center' }}>
                       Demander un devis
-                    </Link>
+                    </a>
                   </div>
                 );
               })}
             </div>
-          </div>
-        </section>
-
-        {/* CTA Band */}
-        <section>
-          <div className="vf2-cta-band">
-            <h2>Prêt à démarrer votre projet ?</h2>
-            <p>
-              Contactez-nous pour une estimation gratuite personnalisée selon vos besoins.
-              Tous nos services sont adaptés à votre domaine d'activité.
-            </p>
-            <Link href="#devis" className="vf2-btn-primary">
-              <Star size={18} />
-              Demander un devis
-            </Link>
           </div>
         </section>
 
